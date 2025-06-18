@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Bostinha Apaixonada 💩</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ffe4e1;
+      font-family: 'Comic Sans MS', cursive;
+      overflow: hidden;
+    }
+
+    .floating-poop {
+      position: absolute;
+      font-size: 60px;
+      animation: float 10s linear infinite;
+      top: 40%;
+      left: -100px;
+      cursor: pointer;
+    }
+
+    @keyframes float {
+      0% { left: -100px; }
+      50% { top: 35%; }
+      100% { left: 100%; }
+    }
+
+    .speech-bubble {
+      position: absolute;
+      top: -60px;
+      left: 70px;
+      background: #fff;
+      padding: 10px 15px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      font-size: 18px;
+      white-space: nowrap;
+    }
+
+    .message {
+      position: absolute;
+      bottom: 60px;
+      width: 100%;
+      text-align: center;
+      font-size: 24px;
+      color: #4b2e2e;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="floating-poop" onclick="playSound()">
+    💩
+    <div class="speech-bubble">Te amo</div>
+  </div>
+
+  <div class="message">
+    O amor pode até feder às vezes, mas com você... até a bosta brilha!
+  </div>
+
+  <audio id="fart-sound">
+    <source src="https://www.soundjay.com/human/sounds/fart-01.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function playSound() {
+      const sound = document.getElementById("fart-sound");
+      sound.currentTime = 0;
+      sound.play();
+    }
+  </script>
+
+</body>
+</html>
